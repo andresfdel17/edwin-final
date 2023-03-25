@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/edwin-final/static/css/main.c2cab247.css",
+    "main.js": "/edwin-final/static/js/main.a24cb021.js",
+    "static/media/react.png": "/edwin-final/static/media/react.25803af39958a2cb9df1.png",
+    "index.html": "/edwin-final/index.html",
+    "main.c2cab247.css.map": "/edwin-final/static/css/main.c2cab247.css.map",
+    "main.a24cb021.js.map": "/edwin-final/static/js/main.a24cb021.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2cab247.css",
+    "static/js/main.a24cb021.js"
+  ]
+}
