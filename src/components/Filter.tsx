@@ -1,18 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FilterProps } from '../interfaces';
-import { FormControl, Row, Col } from "react-bootstrap";
+import { FormControl, Row, Col, Alert } from "react-bootstrap";
 
-export const Filter = ({ setFilter, filter }: FilterProps) => {
-  const [value,setValue] = useState<string>(filter);
-  const changeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const inputValue = (e.target as HTMLInputElement).value;
-    setValue(inputValue);
-    setFilter(inputValue);
-  }
+export const Filter = ({ setFilter, filter, message }: FilterProps) => {
   return (
     <Row>
       <Col sm={3}>
-        <FormControl type="text" size="sm" onChange={changeFilter} value={value}  />
+        <label>Búsqueda</label>
+        <FormControl type="text" size="sm" onChange={(e) => setFilter(e.target.value)} value={filter} />
+      </Col>
+      <Col sm="auto">
+        {
+          message !== "" && (
+            <Alert variant={"warning"}>
+              {message}
+            </Alert>
+          )
+        }
       </Col>
     </Row>
   )
